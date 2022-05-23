@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database 7.3/5319
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 6
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon May 23 13:57:04 2022 EDT
+Local Time is:    Mon May 23 13:59:37 2022 EDT
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 
@@ -58,13 +58,13 @@ SCT capabilities: 	       (0x103d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
-  1 Raw_Read_Error_Rate     0x000f   081   063   044    Pre-fail  Always       -       128829419
+  1 Raw_Read_Error_Rate     0x000f   081   063   044    Pre-fail  Always       -       128831475
   3 Spin_Up_Time            0x0003   097   096   070    Pre-fail  Always       -       0
   5 Reallocated_Sector_Ct   0x0033   100   100   010    Pre-fail  Always       -       0
-  7 Seek_Error_Rate         0x000f   082   060   030    Pre-fail  Always       -       192061728
+  7 Seek_Error_Rate         0x000f   082   060   030    Pre-fail  Always       -       192061730
   9 Power_On_Hours          0x0032   060   060   000    Old_age   Always       -       35118
  10 Spin_Retry_Count        0x0013   100   100   097    Pre-fail  Always       -       0
-180 Unknown_HDD_Attribute   0x003b   100   100   030    Pre-fail  Always       -       521999211
+180 Unknown_HDD_Attribute   0x003b   100   100   030    Pre-fail  Always       -       522001371
 194 Temperature_Celsius     0x0022   025   040   000    Old_age   Always       -       25 (0 19 0 0 0)
 196 Reallocated_Event_Count 0x0033   100   100   010    Pre-fail  Always       -       0
 
