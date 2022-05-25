@@ -232,10 +232,9 @@ function FormatDrives() {
 	elif [ $blockSize -eq 512 ]; then
 	  error+="512 Drive detected, there is no need to format $1\n"
 	else
-          echo "Formatting $1"
-          
-	  smartctl -a /dev/$1; sleep 5; echo FORMATTING $1; sleep 5;smartctl -a /dev/$1; sleep 5; echo FORMATTING $1; sleep 5 &
-	  #xterm -e "sg_format --format /dev/$1 --size=512; sleep 5" &
+          echo "Formatting $1"          
+	  #sg_format --format /dev/$1 --size=512 &
+	  xterm -e "sg_format --format /dev/$1 --size=512; sleep 5" &
 	fi
 }
 
@@ -344,6 +343,7 @@ main() {
         CountDrives
         PrintSeperatorLine
         echo -e "\t$numOfDrives drives have been detected"
+        
         PrintSeperatorLine
         #GiveUserOptions
         SetUpTable
@@ -365,7 +365,7 @@ main() {
         done
 
         echo Pushing Files
-        #PushFilesToGitHub 1> /home/harddrive/gitoutput.txt
+        PushFilesToGitHub 1> /home/harddrive/gitoutput.txt
 
         GiveUserOptions
         SelectDrives
@@ -383,5 +383,5 @@ main() {
 
 
 ## Main function is called while pushing all error messages to /dev/null
-main # 2>> /home/harddrive/errors.txt
+main  2>> /home/harddrive/errors.txt
 
