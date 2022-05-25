@@ -1,0 +1,55 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.38-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               HITACHI
+Product:              HMRSK2000GBAS07K
+Revision:             3P02
+Compliance:           SPC-4
+User Capacity:        2,031,655,167,360 bytes [2.03 TB]
+Logical block size:   520 bytes
+Rotation Rate:        7200 rpm
+Form Factor:          3.5 inches
+Logical Unit id:      0x5000cca01c7c20d0
+Serial number:        YGJ687SK
+Device type:          disk
+Transport protocol:   SAS (SPL-4)
+Local Time is:        Wed May 25 08:11:11 2022 EDT
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Current Drive Temperature:     29 C
+Drive Trip Temperature:        85 C
+
+Accumulated power on time, hours:minutes 25649:17
+Manufactured in week 36 of year 2012
+Specified cycle count over device lifetime:  50000
+Accumulated start-stop cycles:  17
+Specified load-unload count over device lifetime:  600000
+Accumulated load-unload cycles:  1102
+Elements in grown defect list: 2168
+
+Vendor (Seagate Cache) information
+  Blocks sent to initiator = 9203280483713024
+
+Error counter log:
+           Errors Corrected by           Total   Correction     Gigabytes    Total
+               ECC          rereads/    errors   algorithm      processed    uncorrected
+           fast | delayed   rewrites  corrected  invocations   [10^9 bytes]  errors
+read:          0    87435         0     87435    3226524      43978.382           0
+write:         0  2775496         0   2775496     422436      37931.050           0
+verify:        0     2441         0      2441     561367     149822.399        1536
+
+Non-medium error count:        0
+
+SMART Self-test log
+Num  Test              Status                 segment  LifeTime  LBA_first_err [SK ASC ASQ]
+     Description                              number   (hours)
+# 1  Background short  Completed                   -   25649                 - [-   -    -]
+
+Long (extended) Self-test duration: 19038 seconds [5.3 hours]
+

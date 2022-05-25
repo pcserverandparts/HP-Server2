@@ -1,0 +1,116 @@
+_________________________________________________________________________________________________________________
+Initial update and installation
+
+hostnamectl set-hostname <(SERVER NAME)>
+sudo dnf update && sudo dnf upgrade && reboot
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
+sudo dnf install
+	lsscsi
+	smartmontools
+	git
+	xterm
+	gnome-terminal
+	hdparm
+	sg3_utils
+	make
+	snapd
+
+
+sudo usermod -G root harddrive
+
+_____________________________________________________________________________________
+Setting up SeaChestUtilities
+
+touch /home/harddrive/seachest.sh && chmod +x /home/harddrive/seachest.sh && nano /home/harddrive/seachest.sh
+
+
+
+## Copy everything below between the ### and paste it into the bash file that opened
+#################################################################################################################
+#!/bin/bash
+
+cd /root
+
+## MAKE SURE TO UPDATE BRANCH VERSION BELOW! LAST UPDATE Apr 14, 2022
+git clone --recursive --branch v22.04 https://github.com/Seagate/openSeaChest.git
+
+cd openSeaChest/Make/gcc && make release
+
+mkdir -pv /opt/openSeaChest/bin && mv openseachest_exes/* /opt/openSeaChest/bin
+
+cd / && rm -rf /root/openSeaChest
+
+cat <<<'export PATH="${PATH}:/opt/openSeaChest/bin"' >> /root/.bashrc
+
+exit
+
+
+#################################################################################################################
+
+
+
+## Log off SSH and log back in
+
+
+
+
+_________________________________________________________________________________________________________________
+Setting up DriveScript
+
+mkdir /home/harddrive/Script && mkdir -p /home/harddrive/Drives/<(SERVER NAME)>
+
+## Remote sftp into the server and save script
+sftp harddrive@<(SERVER NAME)>
+
+## Add execute permissions
+cd /home/harddrive/Script
+chmod +x drives.sh
+
+## Add symbolic link to bin directory to allow script to be run from any folder using command "drives"
+cd /bin
+ln -s /home/harddrive/Script/drives.sh drives
+
+
+
+
+
+cd
+_________________________________________________________________________________________________________________
+Setting up GitHub
+
+git config --global user.email "pcserverandparts.shared@gmail.com"
+git config --global user.name "pcserverandparts"
+git config --global init.defaultBranch main
+
+ssh-keygen -t rsa -b 4096 -C "pcserverandparts.shared@gmail.com"
+ - Press Enter for default
+ - Leave Passphrase blank
+
+## Before adding the new SSH key to the ssh-agent first ensure the ssh-agent is running by executing:
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
+
+## Copy output and paste it in "Key" box on github
+https://github.com/settings/ssh/new
+
+(IF IT IS A NEW SERVER YOU WILL NEED TO CREATE A NEW REPOSITORY AT https://github.com/new) 
+Note: The Repository name will be the Server name
+ls
+
+cd /home/harddrive/Drives/<(SERVER NAME)>
+
+echo "First Commit" > README.txt
+git init
+git add .
+git commit -m "Test"
+git branch -M main
+git remote add origin git@github.com:pcserverandparts/<(SERVER NAME)>.git
+git push -u origin main
+
+
+
+

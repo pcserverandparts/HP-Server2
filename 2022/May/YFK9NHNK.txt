@@ -1,0 +1,55 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.38-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               HITACHI
+Product:              HMRSK2000GBAS07K
+Revision:             3P02
+Compliance:           SPC-4
+User Capacity:        2,031,655,167,360 bytes [2.03 TB]
+Logical block size:   520 bytes
+Rotation Rate:        7200 rpm
+Form Factor:          3.5 inches
+Logical Unit id:      0x5000cca01bbaab4c
+Serial number:        YFK9NHNK
+Device type:          disk
+Transport protocol:   SAS (SPL-4)
+Local Time is:        Wed May 25 08:11:10 2022 EDT
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Current Drive Temperature:     29 C
+Drive Trip Temperature:        85 C
+
+Accumulated power on time, hours:minutes 21310:07
+Manufactured in week 24 of year 2013
+Specified cycle count over device lifetime:  50000
+Accumulated start-stop cycles:  24
+Specified load-unload count over device lifetime:  600000
+Accumulated load-unload cycles:  902
+Elements in grown defect list: 0
+
+Vendor (Seagate Cache) information
+  Blocks sent to initiator = 11935331276292096
+
+Error counter log:
+           Errors Corrected by           Total   Correction     Gigabytes    Total
+               ECC          rereads/    errors   algorithm      processed    uncorrected
+           fast | delayed   rewrites  corrected  invocations   [10^9 bytes]  errors
+read:          0    36452         0     36452    1125650      64906.273           0
+write:         0  3635139         0   3635139     418709      44868.159           0
+verify:        0     1414         0      1414    2288797     123967.048           0
+
+Non-medium error count:        0
+
+SMART Self-test log
+Num  Test              Status                 segment  LifeTime  LBA_first_err [SK ASC ASQ]
+     Description                              number   (hours)
+# 1  Background short  Completed                   -   21309                 - [-   -    -]
+
+Long (extended) Self-test duration: 19038 seconds [5.3 hours]
+

@@ -1,0 +1,65 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.38-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SEAGATE
+Product:              SMEG2000S5xnF7.2
+Revision:             3P01
+Compliance:           SPC-4
+User Capacity:        2,000,398,934,016 bytes [2.00 TB]
+Logical block size:   512 bytes
+LU is fully provisioned
+Rotation Rate:        7200 rpm
+Form Factor:          3.5 inches
+Logical Unit id:      0x5000c50059043ebf
+Serial number:        Z1X2RKBP0000C4524Y7S
+Device type:          disk
+Transport protocol:   SAS (SPL-4)
+Local Time is:        Mon May 23 15:05:17 2022 EDT
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Current Drive Temperature:     21 C
+Drive Trip Temperature:        68 C
+
+Accumulated power on time, hours:minutes 52942:30
+Manufactured in week 28 of year 2014
+Specified cycle count over device lifetime:  10000
+Accumulated start-stop cycles:  89
+Specified load-unload count over device lifetime:  300000
+Accumulated load-unload cycles:  2290
+Elements in grown defect list: 0
+
+Vendor (Seagate Cache) information
+  Blocks sent to initiator = 694571732
+  Blocks received from initiator = 1223786566
+  Blocks read from cache and sent to initiator = 4221325108
+  Number of read and write commands whose size <= segment size = 2061090523
+  Number of read and write commands whose size > segment size = 0
+
+Vendor (Seagate/Hitachi) factory information
+  number of hours powered up = 52942.50
+  number of minutes until next internal SMART test = 59
+
+Error counter log:
+           Errors Corrected by           Total   Correction     Gigabytes    Total
+               ECC          rereads/    errors   algorithm      processed    uncorrected
+           fast | delayed   rewrites  corrected  invocations   [10^9 bytes]  errors
+read:   3768502090        0         0  3768502090          0     479662.064           0
+write:         0        0         0         0          0     317146.025           0
+verify: 2584277383        0         0  2584277383          0     333650.523           0
+
+Non-medium error count:        8
+
+SMART Self-test log
+Num  Test              Status                 segment  LifeTime  LBA_first_err [SK ASC ASQ]
+     Description                              number   (hours)
+# 1  Background short  Aborted (device reset ?)    -   52942                 - [-   -    -]
+# 2  Background short  Completed                   -   52901                 - [-   -    -]
+
+Long (extended) Self-test duration: 18300 seconds [5.1 hours]
+
