@@ -1,0 +1,47 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.38-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               IBM-ESXS
+Product:              ST3300655SS
+Revision:             BA2D
+Compliance:           SPC-3
+User Capacity:        300,000,000,000 bytes [300 GB]
+Logical block size:   512 bytes
+Rotation Rate:        15015 rpm
+Logical Unit id:      0x5000c500043cdfab
+Serial number:        3LM3692L00009839D0WM
+Device type:          disk
+Transport protocol:   SAS (SPL-4)
+Local Time is:        Thu May 26 07:51:54 2022 EDT
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Current Drive Temperature:     23 C
+Drive Trip Temperature:        68 C
+
+Accumulated power on time, hours:minutes 61683:06
+Elements in grown defect list: 4
+
+Error counter log:
+           Errors Corrected by           Total   Correction     Gigabytes    Total
+               ECC          rereads/    errors   algorithm      processed    uncorrected
+           fast | delayed   rewrites  corrected  invocations   [10^9 bytes]  errors
+read:      11517        6         0     11523      11527         13.440           4
+write:         0        0         0         0          0       1244.751           0
+verify: 42024504        0         0  42024504   42024504      31367.465           0
+
+Non-medium error count:        4
+
+SMART Self-test log
+Num  Test              Status                 segment  LifeTime  LBA_first_err [SK ASC ASQ]
+     Description                              number   (hours)
+# 1  Background short  Aborted (device reset ?)    -   61683                 - [-   -    -]
+# 2  Background short  Failed in segment -->       -   61679         585928120 [0x3 0x11 0x0]
+
+Long (extended) Self-test duration: 3852 seconds [64.2 minutes]
+
