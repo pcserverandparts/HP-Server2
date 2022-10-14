@@ -1,0 +1,62 @@
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.15.72-1-MANJARO] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SEAGATE
+Product:              ST3300657SS-H
+Revision:             EH02
+Compliance:           SPC-3
+User Capacity:        146,815,733,760 bytes [146 GB]
+Logical block size:   512 bytes
+Rotation Rate:        15000 rpm
+Form Factor:          3.5 inches
+Logical Unit id:      0x5000c50039f7072b
+Serial number:        6SJ1G3ZX
+Device type:          disk
+Transport protocol:   SAS (SPL-4)
+Local Time is:        Fri Oct 14 13:57:01 2022 EDT
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Current Drive Temperature:     31 C
+Drive Trip Temperature:        68 C
+
+Accumulated power on time, hours:minutes 46665:37
+Elements in grown defect list: 0
+
+Vendor (Seagate Cache) information
+  Blocks sent to initiator = 3943258110
+  Blocks received from initiator = 3295439860
+  Blocks read from cache and sent to initiator = 816946302
+  Number of read and write commands whose size <= segment size = 179644835
+  Number of read and write commands whose size > segment size = 0
+
+Vendor (Seagate/Hitachi) factory information
+  number of hours powered up = 46665.62
+  number of minutes until next internal SMART test = 54
+
+Error counter log:
+           Errors Corrected by           Total   Correction     Gigabytes    Total
+               ECC          rereads/    errors   algorithm      processed    uncorrected
+           fast | delayed   rewrites  corrected  invocations   [10^9 bytes]  errors
+read:   221332129        0         0  221332129   221332129      18330.510           0
+write:         0        0         0         0          0       6144.535           0
+verify: 341221148        7         0  341221155   341221155      34386.232           0
+
+Non-medium error count:        4
+
+SMART Self-test log
+Num  Test              Status                 segment  LifeTime  LBA_first_err [SK ASC ASQ]
+     Description                              number   (hours)
+# 1  Background short  Completed                  16   46656                 - [-   -    -]
+# 2  Background short  Completed                  16   46632                 - [-   -    -]
+# 3  Background long   Completed                  16       1                 - [-   -    -]
+# 4  Background long   Completed                  16       0                 - [-   -    -]
+# 5  Background short  Completed                  16       0                 - [-   -    -]
+
+Long (extended) Self-test duration: 3200 seconds [53.3 minutes]
+
